@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F609D5FB4B911F75793C9CC /* NotchOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E07A47636D43938380D8C /* NotchOverlayController.swift */; };
+		230B7AE3791FCDAA4D28F484 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B455A92023E4BB251D2A75 /* AudioRecorder.swift */; };
+		24F07748ECABC26D10E94804 /* SmartNotchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51EB3C2F88698F5BF1A0D2 /* SmartNotchApp.swift */; };
+		2A160844ABA2501CA017B794 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6335F4965DA3295BB34C909 /* AppState.swift */; };
+		4351A9AA971953BF97828848 /* SpeechTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C97DD783DA188C9ABB0F6C /* SpeechTranscriber.swift */; };
+		942D0B99886F50AC600B2CEA /* GeminiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E3564169DD5F378729506 /* GeminiClient.swift */; };
+		9A16414F2225DE52DCF96228 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8826ECCB7A3059CB817C98 /* KeychainStore.swift */; };
+		C859DE5749ED426699F516F2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89276662726435E6FE32C2 /* SettingsView.swift */; };
+		E87CFAD4B872C2C7730FD2F5 /* NotchOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD914C0BFD588BA8CFA77EF /* NotchOverlayView.swift */; };
+		EDE0C42AAFA9598B3C3098E9 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2DFC908B25538F622CC8F /* HotKeyManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02C97DD783DA188C9ABB0F6C /* SpeechTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTranscriber.swift; sourceTree = "<group>"; };
+		23F59944B3220CDC8C1DCEE4 /* SmartNotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartNotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0E3564169DD5F378729506 /* GeminiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiClient.swift; sourceTree = "<group>"; };
+		4E0E07A47636D43938380D8C /* NotchOverlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchOverlayController.swift; sourceTree = "<group>"; };
+		5DD914C0BFD588BA8CFA77EF /* NotchOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchOverlayView.swift; sourceTree = "<group>"; };
+		67E2DFC908B25538F622CC8F /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
+		7E8826ECCB7A3059CB817C98 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		83233C6C5E47AACA9319D23E /* SmartNotch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartNotch.entitlements; sourceTree = "<group>"; };
+		CF89276662726435E6FE32C2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6335F4965DA3295BB34C909 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E6B455A92023E4BB251D2A75 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		EEA992E8B76E0FDFD077F8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF51EB3C2F88698F5BF1A0D2 /* SmartNotchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartNotchApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A03459BC519EAAF890AF6D37 = {
+			isa = PBXGroup;
+			children = (
+				FBE884F7B4B716D431349E76 /* SmartNotch */,
+				CA79500A4BD99A926FA559B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA79500A4BD99A926FA559B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F59944B3220CDC8C1DCEE4 /* SmartNotch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBE884F7B4B716D431349E76 /* SmartNotch */ = {
+			isa = PBXGroup;
+			children = (
+				D6335F4965DA3295BB34C909 /* AppState.swift */,
+				E6B455A92023E4BB251D2A75 /* AudioRecorder.swift */,
+				4D0E3564169DD5F378729506 /* GeminiClient.swift */,
+				67E2DFC908B25538F622CC8F /* HotKeyManager.swift */,
+				EEA992E8B76E0FDFD077F8E9 /* Info.plist */,
+				7E8826ECCB7A3059CB817C98 /* KeychainStore.swift */,
+				4E0E07A47636D43938380D8C /* NotchOverlayController.swift */,
+				5DD914C0BFD588BA8CFA77EF /* NotchOverlayView.swift */,
+				CF89276662726435E6FE32C2 /* SettingsView.swift */,
+				83233C6C5E47AACA9319D23E /* SmartNotch.entitlements */,
+				FF51EB3C2F88698F5BF1A0D2 /* SmartNotchApp.swift */,
+				02C97DD783DA188C9ABB0F6C /* SpeechTranscriber.swift */,
+			);
+			path = SmartNotch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B985EEEF33CD23ACE826D7E /* SmartNotch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29143245C664ED18DA45E6EE /* Build configuration list for PBXNativeTarget "SmartNotch" */;
+			buildPhases = (
+				9358CB4BBF56A4393FC938F9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartNotch;
+			packageProductDependencies = (
+			);
+			productName = SmartNotch;
+			productReference = 23F59944B3220CDC8C1DCEE4 /* SmartNotch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C56963BE3EFE5830C58E7B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					2B985EEEF33CD23ACE826D7E = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B135ADAA64EC30B71527380A /* Build configuration list for PBXProject "SmartNotch" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A03459BC519EAAF890AF6D37;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CA79500A4BD99A926FA559B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B985EEEF33CD23ACE826D7E /* SmartNotch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9358CB4BBF56A4393FC938F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A160844ABA2501CA017B794 /* AppState.swift in Sources */,
+				230B7AE3791FCDAA4D28F484 /* AudioRecorder.swift in Sources */,
+				942D0B99886F50AC600B2CEA /* GeminiClient.swift in Sources */,
+				EDE0C42AAFA9598B3C3098E9 /* HotKeyManager.swift in Sources */,
+				9A16414F2225DE52DCF96228 /* KeychainStore.swift in Sources */,
+				0F609D5FB4B911F75793C9CC /* NotchOverlayController.swift in Sources */,
+				E87CFAD4B872C2C7730FD2F5 /* NotchOverlayView.swift in Sources */,
+				C859DE5749ED426699F516F2 /* SettingsView.swift in Sources */,
+				24F07748ECABC26D10E94804 /* SmartNotchApp.swift in Sources */,
+				4351A9AA971953BF97828848 /* SpeechTranscriber.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0203A71BE3C9491E58CEB964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 626SQTW3TH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = SmartNotch;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		268DC9A4AB785971333532EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartNotch/SmartNotch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = SmartNotch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartnotch.app;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6640AE3E745D1C76A6BB9114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartNotch/SmartNotch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = SmartNotch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartnotch.app;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B2CBE55746468B86EB7F47EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 626SQTW3TH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = SmartNotch;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29143245C664ED18DA45E6EE /* Build configuration list for PBXNativeTarget "SmartNotch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268DC9A4AB785971333532EF /* Debug */,
+				6640AE3E745D1C76A6BB9114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B135ADAA64EC30B71527380A /* Build configuration list for PBXProject "SmartNotch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2CBE55746468B86EB7F47EA /* Debug */,
+				0203A71BE3C9491E58CEB964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C56963BE3EFE5830C58E7B1 /* Project object */;
+}
