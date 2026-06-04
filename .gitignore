@@ -3,7 +3,6 @@
 .AppleDouble
 .LSOverride
 
-# Xcode
 build/
 DerivedData/
 *.pbxuser
@@ -16,15 +15,12 @@ xcuserdata/
 *.xcuserstate
 *.xcscmblueprint
 
-# Swift Package Manager
 .build/
 Packages/
 Package.resolved
 .swiftpm/
 
-# CocoaPods / Carthage (in case)
 Pods/
 Carthage/Build/
 
-# Optional: secrets you don't want pushed
 *.env
