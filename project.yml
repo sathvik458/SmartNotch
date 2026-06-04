@@ -11,7 +11,7 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     ENABLE_HARDENED_RUNTIME: YES
     CODE_SIGN_STYLE: Automatic
-    CODE_SIGN_IDENTITY: "-"   # ad-hoc; set your team in Xcode for real signing
+    CODE_SIGN_IDENTITY: "-"
     PRODUCT_NAME: SmartNotch
 targets:
   SmartNotch:
@@ -19,13 +19,15 @@ targets:
     platform: macOS
     sources:
       - path: SmartNotch
+        excludes:
+          - "Info.plist"
+          - "SmartNotch.entitlements"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.smartnotch.app
+        GENERATE_INFOPLIST_FILE: NO
         INFOPLIST_FILE: SmartNotch/Info.plist
         CODE_SIGN_ENTITLEMENTS: SmartNotch/SmartNotch.entitlements
         LD_RUNPATH_SEARCH_PATHS:
           - "$(inherited)"
           - "@executable_path/../Frameworks"
-    info:
-      path: SmartNotch/Info.plist

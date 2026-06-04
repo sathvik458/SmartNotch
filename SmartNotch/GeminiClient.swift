@@ -40,13 +40,21 @@ final class GeminiClient {
             ])
         }
 
+        // Suppress thinking-token leakage on Gemini 2.5 models — without this,
+        // the model often pours its scratchpad ("Wait, let me reconsider…",
+        // "Line 1: …") straight into the answer stream.
+        var generationConfig: [String: Any] = [
+            "temperature": 0.3,
+            "maxOutputTokens": 1500
+        ]
+        if model.contains("2.5") {
+            generationConfig["thinkingConfig"] = ["thinkingBudget": 0]
+        }
+
         let body: [String: Any] = [
             "system_instruction": ["parts": [["text": sysPrompt]]],
             "contents": [["role": "user", "parts": parts]],
-            "generationConfig": [
-                "temperature": 0.4,
-                "maxOutputTokens": 600
-            ]
+            "generationConfig": generationConfig
         ]
 
         var req = URLRequest(url: url)

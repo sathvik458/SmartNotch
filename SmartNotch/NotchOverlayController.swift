@@ -47,7 +47,7 @@ final class NotchOverlayController: NSObject {
             onRefresh:    { [weak self] in self?.refreshVoiceCapture() }
         )
         let host = NSHostingView(rootView: view)
-        host.frame = NSRect(x: 0, y: 0, width: 520, height: 280)
+        host.frame = NSRect(x: 0, y: 0, width: 520, height: 380)
         panel.contentView = host
         self.hostingView = host
         self.window = panel
@@ -116,14 +116,19 @@ final class NotchOverlayController: NSObject {
         recorder.stop { [weak self] audioURL in
             guard let self = self else { return }
             Task { @MainActor in
-                let text = self.appState.transcript.trimmingCharacters(in: .whitespacesAndNewlines)
-                if text.count >= 3 {
-                    await self.askGemini(prompt: text, audio: nil)
-                } else if let url = audioURL {
-                    await self.askGemini(prompt: "Transcribe and answer the user's question in this audio.",
-                                         audio: url)
+                // Authoritative path: send the audio itself to Gemini. Gemini's
+                // multimodal audio model is far more accurate on technical
+                // vocabulary than Apple's general-purpose dictation, which we
+                // were only using for the live partial caption.
+                if let url = audioURL {
+                    let prompt = """
+                    The user just asked the following question by voice. The audio is attached.
+                    They are a software engineer / CS student. Transcribe their question                     accurately (technical terms, programming languages, library names,                     algorithm names, framework names — get these RIGHT), then answer it.
+                    Reply with ONLY the answer (no preamble, no echo of the transcript).
+                    """
+                    self.streamTask = Task { await self.askGemini(prompt: prompt, audio: url) }
                 } else {
-                    self.appState.mode = .error("Didn't catch that.")
+                    self.appState.mode = .error("No audio captured. Check the mic permission.")
                 }
             }
         }

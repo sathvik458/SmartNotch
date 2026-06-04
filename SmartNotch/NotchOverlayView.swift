@@ -39,7 +39,7 @@ struct NotchOverlayView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
-        .frame(maxWidth: 500, maxHeight: 260, alignment: .top)
+        .frame(maxWidth: 500, maxHeight: 360, alignment: .top)
         .background(
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .fill(.black.opacity(0.85))
@@ -70,7 +70,7 @@ struct NotchOverlayView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .id("answer-tail")
             }
-            .frame(maxHeight: 220)
+            .frame(maxHeight: 320)
             .onChange(of: text) { _, _ in
                 withAnimation(.linear(duration: 0.12)) {
                     proxy.scrollTo("answer-tail", anchor: .bottom)

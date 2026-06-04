@@ -51,7 +51,8 @@ final class HotKeyManager {
 
         var rID = EventHotKeyID(signature: HotKeyManager.signature, id: HotKeyManager.refreshID)
         RegisterEventHotKey(UInt32(kVK_ANSI_R), mods, rID,
-                            GetApplicationEventTarget(), 0, &refreshRef)
+                            GetApplicationEventTarget(), 0
+                        , &refreshRef)
         _ = tID; _ = rID
     }
 
