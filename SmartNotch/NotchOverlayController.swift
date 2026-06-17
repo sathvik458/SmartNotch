@@ -76,6 +76,15 @@ final class NotchOverlayController: NSObject {
 
     // MARK: - Voice flow (toggle)
 
+    func toggleRapidCapture() {
+        if case .listening = appState.mode {
+            finishVoiceCapture()
+            return
+        }
+        appState.rapidMode = true
+        startVoiceCapture()
+    }
+
     func toggleVoiceCapture() {
         switch appState.mode {
         case .listening:
@@ -181,7 +190,7 @@ final class NotchOverlayController: NSObject {
                 }
             }
             try Task.checkCancellation()
-            await MainActor.run { self.appState.mode = .idle }
+            await MainActor.run { self.appState.mode = .idle; self.appState.rapidMode = false }
             scheduleAutoDismiss()
         } catch is CancellationError {
             // Refresh / new query — silent.

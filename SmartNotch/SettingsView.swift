@@ -26,7 +26,7 @@ struct SettingsView: View {
                     .frame(minHeight: 110)
             }
             Section("Shortcut") {
-                Text("Press **⌃⌥ + Space** to start recording, press again to send.\n**⌃⌥ + R** restarts a new recording.\n**Click the ↻ button** on the chip to refresh.")
+                Text("**⌃⌥ + Space** — toggle voice capture (tap to record, tap to send).\n**⌃⌥ + Q** — rapid mode: 1–3 line answer.\n**⌃⌥ + R** — refresh: cancel current, start new recording.\n**↻ button** on the chip does the same as Refresh.")
                     .foregroundStyle(.secondary)
             }
             Section("Privacy") {

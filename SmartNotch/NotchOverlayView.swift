@@ -60,15 +60,22 @@ struct NotchOverlayView: View {
     @ViewBuilder
     private var answerBody: some View {
         let text = subtitle
+        let isAnswer: Bool = { if case .answering = appState.mode { return true }; if case .idle = appState.mode { return !appState.answer.isEmpty }; return false }()
         ScrollViewReader { proxy in
             ScrollView(.vertical, showsIndicators: false) {
-                Text(text)
-                    .font(.system(size: 13))
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .id("answer-tail")
+                Group {
+                    if isAnswer {
+                        AnswerRenderer(text: text)
+                    } else {
+                        Text(text)
+                            .font(.system(size: 13))
+                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                .id("answer-tail")
             }
             .frame(maxHeight: 320)
             .onChange(of: text) { _, _ in

@@ -39,6 +39,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         hotKey.onRefresh = { [weak self] in
             self?.notchController.refreshVoiceCapture()
         }
+        hotKey.onRapid = { [weak self] in
+            self?.notchController.toggleRapidCapture()
+        }
         hotKey.start()
     }
 

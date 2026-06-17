@@ -17,6 +17,7 @@ final class AppState: ObservableObject {
     @Published var answer: String = ""
     @Published var typedQuery: String = ""
     @Published var showTypingField: Bool = false
+    @Published var rapidMode: Bool = false   // one-shot terse-answer mode
 
     // Persisted via Keychain
     @Published var geminiAPIKey: String = KeychainStore.read(key: "gemini_api_key") ?? "" {

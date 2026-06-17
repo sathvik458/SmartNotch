@@ -24,7 +24,11 @@ final class GeminiClient {
     func streamAnswer(prompt: String, audioFile: URL?, onDelta: @escaping (String) -> Void) async throws {
         let key = await MainActor.run { appState.geminiAPIKey }
         let model = await MainActor.run { appState.modelID }
-        let sysPrompt = await MainActor.run { appState.systemPrompt }
+        let baseSys = await MainActor.run { appState.systemPrompt }
+        let rapid   = await MainActor.run { appState.rapidMode }
+        let sysPrompt = rapid
+            ? (baseSys + "\n\nRAPID MODE: respond in 1–3 short lines MAX. No code blocks unless trivially inline. No preamble. Optimize for speed of reading.")
+            : baseSys
         guard !key.isEmpty else { throw ClientError.missingKey }
 
         let endpoint = "https://generativelanguage.googleapis.com/v1beta/models/\(model):streamGenerateContent?alt=sse&key=\(key)"
@@ -45,7 +49,7 @@ final class GeminiClient {
         // "Line 1: …") straight into the answer stream.
         var generationConfig: [String: Any] = [
             "temperature": 0.3,
-            "maxOutputTokens": 1500
+            "maxOutputTokens": rapid ? 220 : 1500
         ]
         if model.contains("2.5") {
             generationConfig["thinkingConfig"] = ["thinkingBudget": 0]
