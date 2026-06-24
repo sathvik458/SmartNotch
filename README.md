@@ -57,10 +57,10 @@ macOS will ask for three things — grant all:
 If the hotkey doesn't fire, open **System Settings → Privacy & Security → Input Monitoring**
 and toggle SmartNotch on. (You'll be prompted automatically on first hotkey use.)
 
-## Add your Gemini key
+## Add your LLM key
 
 1. Click the menu-bar ✨ icon → **Settings…** (or press ⌘,)
-2. Paste your key from <https://aistudio.google.com/app/apikey>
+2. Paste your key from LLM API key here        
 3. Pick a model — `gemini-2.0-flash` is the sweet spot for speed.
 
 ## Using it
