@@ -48,6 +48,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                              action: #selector(toggleTextMode), keyEquivalent: "k")
         ask.target = self
         menu.addItem(ask)
+        let screen = NSMenuItem(title: "Answer Question on Screen…",
+                                action: #selector(answerScreen), keyEquivalent: "s")
+        screen.target = self
+        menu.addItem(screen)
         menu.addItem(.separator())
         let settings = NSMenuItem(title: "Settings…",
                                   action: #selector(openSettings), keyEquivalent: ",")
@@ -62,6 +66,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func toggleTextMode() {
         notchController.openTextMode()
+    }
+
+    @objc private func answerScreen() {
+        notchController.answerScreen()
     }
 
     @objc private func openSettings() {

@@ -72,9 +72,7 @@ struct NotchOverlayView: View {
             }
             .frame(maxHeight: 320)
             .onChange(of: text) { _, _ in
-                withAnimation(.linear(duration: 0.12)) {
-                    proxy.scrollTo("answer-tail", anchor: .bottom)
-                }
+                proxy.scrollTo("answer-tail", anchor: .bottom)
             }
         }
     }
@@ -151,7 +149,7 @@ struct NotchOverlayView: View {
     private var subtitle: String {
         switch appState.mode {
         case .listening:
-            return appState.transcript.isEmpty ? "Hold Fn + Space and speak." : appState.transcript
+            return appState.transcript.isEmpty ? "Speak, then press ⌃⌥Space to send." : appState.transcript
         case .transcribing, .thinking:
             return appState.transcript.isEmpty ? "…" : appState.transcript
         case .answering, .idle:

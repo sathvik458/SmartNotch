@@ -6,7 +6,7 @@ import AVFoundation
 /// live partial caption looks sensible. The authoritative transcript still
 /// comes from Gemini's multimodal audio path inside the controller.
 final class SpeechTranscriber: NSObject {
-    private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
+    private var recognizer: SFSpeechRecognizer?
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
     private let engine = AVAudioEngine()
@@ -46,7 +46,8 @@ final class SpeechTranscriber: NSObject {
         "OOP", "SOLID", "MVC", "MVVM", "dependency injection"
     ]
 
-    func start(onPartial: @escaping (String) -> Void) {
+    func start(locale: String, onPartial: @escaping (String) -> Void) {
+        recognizer = SFSpeechRecognizer(locale: Locale(identifier: locale))
         SFSpeechRecognizer.requestAuthorization { _ in }
 
         let req = SFSpeechAudioBufferRecognitionRequest()
